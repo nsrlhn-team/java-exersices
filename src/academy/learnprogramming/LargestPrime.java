@@ -1,5 +1,6 @@
 package academy.learnprogramming;
 
+
 public class LargestPrime {
 
     public static int getLargestPrime(int number) {
@@ -12,7 +13,7 @@ public class LargestPrime {
 
         for (int i = 2; i <= number; i++) {
             if ((number % i) == 0) {
-              int b = 0;
+                int b = 0;
                 for (int j = 2; j < i; j++) {
 
                     if (i % j == 0) {
@@ -22,8 +23,8 @@ public class LargestPrime {
                     }
 
                 }
-                if (b==0) {
-                     a = i;
+                if (b == 0) {
+                    a = i;
                 }
             }
 

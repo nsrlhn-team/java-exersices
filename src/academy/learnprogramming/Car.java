@@ -1,26 +1,34 @@
-package com.timbuchalka;
+package academy.learnprogramming;
 
-/**
- * Created by dev on 8/3/15.
- */
 public class Car {
-
-    private int doors;
+    private boolean engine;
+    private int cylinders;
+    private String name;
     private int wheels;
-    private String model;
-    private String engine;
-    private String colour;
 
-    public void setModel(String model) {
-        String validModel = model.toLowerCase();
-        if(validModel.equals("carrera") || validModel.equals("commodore")) {
-            this.model = model;
-        } else {
-            this.model = "Unknown";
-        }
+    public Car(int cylinder, String name) {
+        this.engine = true;
+        this.cylinders = cylinder;
+        this.name = name;
+        this.wheels = 4;
+    }
+    public String startEngine(){
+        return "The car's engine is starting";
     }
 
-    public String getModel() {
-        return this.model;
+    public String accelerate(){
+        return "The car is accelerating";
+    }
+
+    public String brake(){
+        return "The car is braking";
+    }
+
+    public int getCylinders() {
+        return cylinders;
+    }
+
+    public String getName() {
+        return name;
     }
 }
